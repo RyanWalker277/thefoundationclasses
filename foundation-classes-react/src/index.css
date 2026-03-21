@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.parchment-bg {
+    background-color: #101022;
+    background-image: radial-gradient(#1a1a3a 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+}
+.gold-border {
+    border: 1px solid #c5a059;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.1);
+}
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #c5a059, transparent);
+}
